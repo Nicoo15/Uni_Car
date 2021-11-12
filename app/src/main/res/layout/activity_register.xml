@@ -62,7 +62,7 @@
 
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/emailregister"
         android:layout_width="374dp"
         android:layout_height="48dp"
         android:layout_marginTop="48dp"
@@ -78,7 +78,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/editPassword"
+        android:id="@+id/passwordregister"
         android:layout_width="374dp"
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
@@ -92,11 +92,11 @@
         app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
         android:imeOptions="actionDone"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/emailregister" />
 
 
     <Button
-        android:id="@+id/buttonlogin"
+        android:id="@+id/buttonRegister"
         android:layout_width="371dp"
         android:layout_height="48dp"
         android:layout_marginTop="36dp"
@@ -105,7 +105,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editPassword"
+        app:layout_constraintTop_toBottomOf="@+id/passwordregister"
         app:rippleColor="@color/azulunicar" />
 
     <Switch
@@ -119,5 +119,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonlogin" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonRegister" />
 </androidx.constraintlayout.widget.ConstraintLayout>

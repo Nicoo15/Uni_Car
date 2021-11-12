@@ -16,8 +16,10 @@ public class Login extends AppCompatActivity {
 
     protected Button buttonlogin;
     protected TextView buttonRegister;
-    private EditText editTextTextEmailAddress;
-    private GoogleSignInClient mGoogleSignInClient;
+    public EditText editTextTextEmailAddress;
+
+    public EditText editpassword;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,8 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         buttonRegister =findViewById(R.id.buttonRegister);
+        editpassword =findViewById(R.id.editPassword);
+        editTextTextEmailAddress = findViewById(R.id.editTextTextEmailAddress);
 
 
 
@@ -45,11 +49,16 @@ public class Login extends AppCompatActivity {
         buttonlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent IntentMain = new Intent(Login
-                        .this, MainActivity.class);
-                IntentMain.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                IntentMain.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(IntentMain);
+
+
+                if(editTextTextEmailAddress.getText().toString().equals("")&&editpassword.getText().toString().equals("")){
+                    Intent intent= new Intent (Login.this, RegisterActivity.class);
+                    startActivity(intent);
+
+                }else{
+                    AccesoDatos.logUser(editTextTextEmailAddress.getText().toString(), editpassword.getText().toString(), Login.this );
+                }
+
             }
         });
 
