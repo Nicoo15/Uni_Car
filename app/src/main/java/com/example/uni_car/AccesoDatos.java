@@ -6,6 +6,8 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.example.uni_car.recycler.MiAdaptador;
+import com.example.uni_car.recycler.Post;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
@@ -15,14 +17,57 @@ import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
 import java.util.concurrent.Executor;
 
 public class AccesoDatos {
     public static FirebaseAuth firebaseAuth ;
+    static public FirebaseDatabase database;
+    static public DatabaseReference myRef;
+    static public RecyclerView rec = null;
+
+    public static void uploadData(String origen, String destino, String fecha){
+        database = FirebaseDatabase.getInstance();
+        Double h = Math.random();
+        String h1= h.toString().replace(".", ",");
+        myRef = database.getReference("POSTS/"+h1+"/");
+        myRef.setValue(new Post(origen, destino, fecha));
+    }
+    public static void getPosts(){
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference("POSTS/");
+        ArrayList<Post> posts = new ArrayList<Post>();
+        myRef.child("POSTS").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot s : snapshot.getChildren()){
+                    String origen = s.child("origen").getValue().toString();
+                    String destino = s.child("destino").getValue().toString();
+                    String fecha = s.child("fecha").getValue().toString();
+                    Post p = new Post(origen, destino, fecha );
+                    posts.add(p);
+                }
+                MiAdaptador adaptador = new MiAdaptador(posts);
+                rec.setAdapter(adaptador);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
+
 
     public static void registrarusuario (String email, String password, RegisterActivity r) {
 
@@ -30,35 +75,35 @@ public class AccesoDatos {
         firebaseAuth = FirebaseAuth.getInstance();
 
 
-            firebaseAuth.createUserWithEmailAndPassword(email, password)
+        firebaseAuth.createUserWithEmailAndPassword(email, password)
 
-                    .addOnCompleteListener(r, new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            //checking if success
-                            if (task.isSuccessful()) {
+                .addOnCompleteListener(r, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        //checking if success
+                        if (task.isSuccessful()) {
 
-                                Toast.makeText(r, "Se ha registrado el usuario con el email: " + email, Toast.LENGTH_LONG).show();
-                                Intent intent= new Intent (r, Login.class);
-                                r.startActivity(intent);
+                            Toast.makeText(r, "Se ha registrado el usuario con el email: " + email, Toast.LENGTH_LONG).show();
+                            Intent intent= new Intent (r, Login.class);
+                            r.startActivity(intent);
+                        } else {
+                            if (task.getException() instanceof FirebaseAuthUserCollisionException) {//si se presenta una colisiÛn
+                                Toast.makeText(r, "Ese usuario ya existe ", Toast.LENGTH_SHORT).show();
                             } else {
-                                if (task.getException() instanceof FirebaseAuthUserCollisionException) {//si se presenta una colisiÛn
-                                    Toast.makeText(r, "Ese usuario ya existe ", Toast.LENGTH_SHORT).show();
-                                } else {
-                                    Toast.makeText(r, "No se pudo registrar el usuario ", Toast.LENGTH_LONG).show();
-                                }
+                                Toast.makeText(r, "No se pudo registrar el usuario ", Toast.LENGTH_LONG).show();
                             }
-
                         }
-                    });
-        }
+
+                    }
+                });
+    }
 
     public static void logUser(String mail, String passwd, Login l) {
         //Obtenemos el email y la contraseÒa desde las cajas de texto
 
         final String email = "nico@nico.com";
         String password = "niconico";
-       // String email = mail;
+        // String email = mail;
         //String password = passwd;
 
         //Verificamos que las cajas de texto no esten vacÌas
@@ -108,5 +153,4 @@ public class AccesoDatos {
     }
 
 
-    }
-
+}
