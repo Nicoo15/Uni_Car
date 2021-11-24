@@ -8,14 +8,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.uni_car.R;
-import com.example.uni_car.ui.home.HomeFragment;
 
 import java.util.ArrayList;
 
@@ -31,7 +29,7 @@ public class MiAdaptador extends RecyclerView.Adapter<com.example.uni_car.recycl
     @NonNull
     @Override
     public MiContenedorDeVistas onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View vista = LayoutInflater.from(parent.getContext()).inflate(R.layout.post_activity, parent, false);
+        View vista = LayoutInflater.from(parent.getContext()).inflate(R.layout.post_view, parent, false);
         TextView tv_origen = vista.findViewById(R.id.origen);
         TextView tv_destino = vista.findViewById(R.id.destino);
 
