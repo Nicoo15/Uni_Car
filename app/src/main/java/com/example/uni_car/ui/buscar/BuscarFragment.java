@@ -1,4 +1,4 @@
-package com.example.uni_car.ui.notifications;
+package com.example.uni_car.ui.buscar;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,27 +10,27 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.uni_car.R;
-import com.example.uni_car.databinding.FragmentNotificationsBinding;
+import com.example.uni_car.databinding.FragmentBuscarBinding;
 
-public class NotificationsFragment extends Fragment {
 
-    private NotificationsViewModel notificationsViewModel;
-    private FragmentNotificationsBinding binding;
+public class BuscarFragment extends Fragment {
+
+    private BuscarViewModel buscarViewModel;
+    private FragmentBuscarBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
-                new ViewModelProvider(this).get(NotificationsViewModel.class);
+        buscarViewModel =
+                new ViewModelProvider(this).get(BuscarViewModel.class);
 
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false);
+        binding = FragmentBuscarBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-
-        final TextView textView = binding.textNotifications;
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        final TextView textView = binding.textBuscar;
+        buscarViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

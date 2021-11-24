@@ -8,14 +8,12 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.uni_car.R;
 import com.example.uni_car.databinding.FragmentHomeBinding;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends androidx.fragment.app.Fragment {
 
     private HomeViewModel homeViewModel;
     private FragmentHomeBinding binding;

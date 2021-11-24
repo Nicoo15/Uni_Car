@@ -1,16 +1,16 @@
-package com.example.uni_car.ui.notifications;
+package com.example.uni_car.ui.buscar;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class NotificationsViewModel extends ViewModel {
+public class BuscarViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public NotificationsViewModel() {
+    public BuscarViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is notifications fragment");
+        mText.setValue("This is buscar fragment");
     }
 
     public LiveData<String> getText() {

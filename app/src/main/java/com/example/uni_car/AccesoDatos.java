@@ -58,7 +58,7 @@ public class AccesoDatos {
 
         final String email = "nico@nico.com";
         String password = "niconico";
-        //String email = mail;
+       // String email = mail;
         //String password = passwd;
 
         //Verificamos que las cajas de texto no esten vacÌas
