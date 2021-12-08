@@ -46,14 +46,14 @@ public class AccesoDatos {
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference("POSTS/");
         ArrayList<Post> posts = new ArrayList<Post>();
-        myRef.child("POSTS").addValueEventListener(new ValueEventListener() {
+        myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot s : snapshot.getChildren()){
                     String origen = s.child("origen").getValue().toString();
                     String destino = s.child("destino").getValue().toString();
                     String fecha = s.child("fecha").getValue().toString();
-                    Post p = new Post(origen, destino, fecha );
+                    Post p = new Post(origen, destino, fecha);
                     posts.add(p);
                 }
                 MiAdaptador adaptador = new MiAdaptador(posts);

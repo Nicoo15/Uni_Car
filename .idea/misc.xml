@@ -5,26 +5,36 @@
       <map>
         <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/drawable-v24/bordes_redondos.xml" value="0.2703125" />
         <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
+        <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/drawable/bordes_redondos2.xml" value="0.2703125" />
         <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.2703125" />
         <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.2703125" />
         <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/drawable/ic_launcher_add_background.xml" value="0.2703125" />
         <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/drawable/ic_launcher_add_foreground.xml" value="0.2703125" />
         <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
+        <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/drawable/ic_launcher_profile.xml" value="0.15260416666666668" />
+        <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/drawable/ic_launcher_profile_foreground.xml" value="0.2703125" />
         <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.2703125" />
+        <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/layout/activity_buscar2.xml" value="0.264" />
         <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/layout/activity_perfil.xml" value="0.2" />
         <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/layout/activity_register.xml" value="0.2" />
-        <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/layout/fragment_add.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/layout/fragment_add.xml" value="0.264" />
+        <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/layout/fragment_buscar.xml" value="0.264" />
         <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/layout/fragment_dashboard.xml" value="0.17844202898550723" />
-        <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/layout/fragment_home.xml" value="0.17844202898550723" />
+        <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/layout/fragment_home.xml" value="0.4" />
         <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/layout/fragment_notifications.xml" value="0.17844202898550723" />
         <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/layout/item_viajes.xml" value="0.4" />
         <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/layout/main_activity.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/layout/main_fragment.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/layout/post_activity.xml" value="0.6" />
+        <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/layout/post_view.xml" value="0.4" />
         <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/layout/recycler_activity.xml" value="0.13677536231884058" />
+        <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/layout/splash_screen.xml" value="0.264" />
         <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/layout/vista_post.xml" value="0.4" />
         <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/mipmap-anydpi-v26/ic_launcher_add.xml" value="0.2703125" />
+        <entry key="..\:/Users/Nico/AndroidStudioProjects/Uni_Car/app/src/main/res/mipmap-anydpi-v26/ic_launcher_add_round.xml" value="0.12604166666666666" />
       </map>
     </option>
   </component>

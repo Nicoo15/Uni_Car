@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:elevation="5dp"
     android:layout_margin="5dp"
+    app:cardCornerRadius="20dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 <LinearLayout
     android:padding="5dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:background="@drawable/bordes_redondos2">
 
     <ImageView
         android:id="@+id/imgPost"
-        android:background="@color/black"
+        android:src="@drawable/ic_launcher_profile_foreground"
         android:layout_width="50dp"
         android:layout_height="50dp"/>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginLeft="5dp">
+        android:layout_marginLeft="10dp">
         <TextView
             android:id="@+id/idusuario"
             android:layout_width="match_parent"
@@ -45,7 +47,13 @@
             android:id="@+id/fecha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dia 26/11/2021-Hora: 14:30"
+            android:text="Fecha"
+            android:textColor="@color/teal_700" />
+        <TextView
+            android:id="@+id/hora"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hora"
             android:textColor="@color/teal_700" />
 
 
